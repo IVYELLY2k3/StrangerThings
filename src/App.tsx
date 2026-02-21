@@ -41,9 +41,9 @@ function App() {
 
       <div className="relative z-20">
         <OpeningScene />
-        <PortalEffect onEnter={() => setPortalEntered(true)} />
-
-        {portalEntered && (
+        {!portalEntered ? (
+          <PortalEffect onEnter={() => setPortalEntered(true)} />
+        ) : (
           <>
             <TensionBuild />
             <EventInfo />

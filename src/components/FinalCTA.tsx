@@ -11,7 +11,7 @@ export default function FinalCTA() {
         className="text-center"
       >
         <motion.a
-          href="https://forms.google.com"
+          href="https://bodhixdrishya.vjcet.org/bodhi/event/stranger-things"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block relative group"

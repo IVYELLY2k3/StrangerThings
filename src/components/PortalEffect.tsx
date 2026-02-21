@@ -46,12 +46,28 @@ export default function PortalEffect({ onEnter }: PortalEffectProps) {
         animate={isClicked ? { scale: [0.8, 0.9, 2], opacity: [0.5, 0.7, 0] } : {}}
       >
         <motion.div
-          className="w-64 h-64 md:w-72 md:h-72 rounded-full border-2 border-red-500"
+          className="w-64 h-64 md:w-72 md:h-72 rounded-full border-2 border-red-500 pointer-events-none"
           style={{
             boxShadow: '0 0 80px rgba(255, 26, 26, 0.6), inset 0 0 80px rgba(255, 26, 26, 0.3)'
           }}
           animate={isClicked ? {} : { rotate: [0, 360] }}
           transition={isClicked ? {} : { duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+      </motion.div>
+
+      {/* Central Dot */}
+      <motion.div
+        className="absolute inset-0 flex items-center justify-center z-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+      >
+        <motion.div
+          className="w-4 h-4 bg-red-800 rounded-full cursor-pointer shadow-[0_0_20px_rgba(153,27,27,0.8)]"
+          onClick={handlePortalClick}
+          whileHover={{ scale: 1.5, boxShadow: "0 0 30px rgba(220, 38, 38, 1)" }}
+          animate={isClicked ? { scale: [1, 20], opacity: [1, 0] } : { scale: [1, 1.2, 1] }}
+          transition={isClicked ? { duration: 0.5 } : { duration: 2, repeat: Infinity, ease: "easeInOut" }}
         />
       </motion.div>
 
@@ -62,7 +78,7 @@ export default function PortalEffect({ onEnter }: PortalEffectProps) {
         className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-center"
       >
         <p className="text-red-500 text-sm md:text-base tracking-widest font-light">
-          CLICK TO ENTER
+          CLICK INSIDE THE PORTAL
         </p>
       </motion.div>
 

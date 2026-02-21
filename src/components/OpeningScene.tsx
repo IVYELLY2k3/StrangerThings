@@ -19,7 +19,7 @@ export default function OpeningScene() {
         className="text-center relative"
       >
         <motion.h1
-          className="text-5xl md:text-7xl lg:text-8xl font-bold text-red-600 mb-6 relative"
+          className="text-4xl md:text-7xl lg:text-8xl font-bold text-red-600 mb-6 relative"
           style={{
             fontFamily: "'Cinzel Decorative', serif",
             textShadow: '0 0 20px rgba(255, 26, 26, 0.8), 0 0 40px rgba(255, 26, 26, 0.6), 0 0 60px rgba(255, 26, 26, 0.4)',
@@ -52,7 +52,7 @@ export default function OpeningScene() {
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 0, 1] }}
         transition={{ delay: 6, duration: 1 }}
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-24 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
