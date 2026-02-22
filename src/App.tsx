@@ -6,6 +6,7 @@ import PortalEffect from './components/PortalEffect';
 import TensionBuild from './components/TensionBuild';
 import EventInfo from './components/EventInfo';
 import FinalCTA from './components/FinalCTA';
+import MusicPlayer from './components/MusicPlayer';
 
 function App() {
   const [portalEntered, setPortalEntered] = useState(false);
@@ -58,6 +59,7 @@ function App() {
           background: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.3) 100%)'
         }}
       />
+      <MusicPlayer />
     </div>
   );
 }
